@@ -7,6 +7,7 @@ body {
     background-color: rgb(40,40,40);
     font-family: "Roboto Mono";
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -30,7 +31,7 @@ h1,h2,h3,h4,h5,h6 {
     mask-image: linear-gradient(to bottom, black 70%, transparent);
 }
 
-a {
+#nav a {
     color: white;
     font-size: 150%;
     text-decoration: none;
@@ -38,7 +39,8 @@ a {
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-#nav a.active {
+#nav a.active,
+#nav a:active {
     background-color: rgba(0, 0, 0, 0.3);
     color: deepskyblue;
     border-radius: 10px;
@@ -138,7 +140,7 @@ a {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 1rem;
     height: 100%;
 }
 
@@ -179,6 +181,8 @@ a {
     align-items: center;
     height: 100%;
     width: 100%;
+    color: white;
+    font-size: 150%;
     opacity: 0;
     transition: opacity 0.25s ease;
 }
@@ -187,10 +191,6 @@ a {
     padding: 0 3%;
     font-size: 75%;
     text-align: left;
-}
-
-.project:hover {
-    border-color: deepskyblue;
 }
 
 .project:hover .project-img {
@@ -202,6 +202,10 @@ a {
     opacity: 1;
 }
 
+.project:active {
+    border-color: deepskyblue;
+}
+
 .project-link {
     text-decoration: none;
 }
@@ -209,19 +213,20 @@ a {
 #contact {
     display: flex;
     justify-content: flex-end;
-    color: white;
     width: 75vw;
     padding-bottom: 5%;
     margin: 0 auto;
+    gap: 2%;
 }
 
 .icon-contact {
+    color: white;
     height: 2vw;
     width: 2vw;
     transition: color 0.15s ease;
 }
 
-.icon-contact:hover {
+.icon-contact:active {
     color: deepskyblue;
 }
 
@@ -241,6 +246,14 @@ a {
 
     #devicon-track:has(i:hover) {
         animation-play-state: paused;
+    }
+
+    .project:hover {
+        border-color: deepskyblue;
+    }
+
+    .icon-contact:hover {
+        color: deepskyblue;
     }
 }
 
