@@ -36,6 +36,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 150%;
     text-decoration: none;
     padding: 0.5% 1%;
+    border-radius: 10px;
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -43,7 +44,6 @@ h1,h2,h3,h4,h5,h6 {
 #nav a:active {
     background-color: rgba(0, 0, 0, 0.3);
     color: deepskyblue;
-    border-radius: 10px;
 }
 
 #intro {
@@ -241,7 +241,6 @@ h1,h2,h3,h4,h5,h6 {
     #nav a:hover {
         background-color: rgba(0, 0, 0, 0.3);
         color: deepskyblue;
-        border-radius: 10px;
     }
 
     #devicon-track:has(i:hover) {
