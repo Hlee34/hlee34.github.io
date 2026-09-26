@@ -238,6 +238,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (hover: hover) {
+    .cursor-glow {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 3;
+        background: radial-gradient(
+            500px circle at var(--mouse-x) var(--mouse-y),
+            rgba(100, 191, 255, 0.07),
+            transparent 80% 
+        );
+    }
+
     #nav a:hover {
         background-color: rgba(0, 0, 0, 0.3);
         color: deepskyblue;

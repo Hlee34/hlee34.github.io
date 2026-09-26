@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div class="cursor-glow"></div>
     <div id="nav">
         <a href="#intro">Intro</a>
         <a href="#projects">Projects</a>
@@ -142,6 +143,7 @@
     <script>
         const sections = document.querySelectorAll("#intro, #projects, #contact");
         const links = document.querySelectorAll("#nav a");
+        const glow = document.querySelector(".cursor-glow");
 
         function updateNav() {
             const position = window.scrollY + 100;
@@ -159,6 +161,11 @@
                 link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`)
             );
         }
+
+        window.addEventListener("mousemove", (e) => {
+            glow.style.setProperty("--mouse-x", `${e.clientX}px`);
+            glow.style.setProperty("--mouse-y", `${e.clientY}px`);
+        });
 
         window.addEventListener("scroll", updateNav);
         updateNav();
