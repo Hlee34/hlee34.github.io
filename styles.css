@@ -59,8 +59,8 @@ h1,h2,h3,h4,h5,h6 {
 #intro-text {
     text-align: left;
     width: 55vw;
-    animation: fadeIn 1s;
     margin-top: 0%;
+    animation: fadeIn 1s;
 }
 
 #devicons {
@@ -135,6 +135,7 @@ h1,h2,h3,h4,h5,h6 {
     padding-top: 4%;
     padding-bottom: 10%;
     margin: 0 auto;
+    animation: fadeIn 1s;
 }
 
 .projects-grid {
