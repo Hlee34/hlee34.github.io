@@ -361,6 +361,7 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 50%;
         width: 85vw;
         padding-bottom: 83vh;
+        gap: 1rem;
     }
 
     .icon-contact {
